@@ -189,6 +189,24 @@ model_udechile_posesion.fit(x_udechile, y_udechile_posesion)
 model_udechile_amarillas = LinearRegression()
 model_udechile_amarillas.fit(x_udechile, y_udechile_amarillas)
 
+# Everton
+x_everton = everton_df[features]
+
+y_everton_gf = everton_df["gf_target"]
+y_everton_posesion = everton_df["posesion_target"]
+y_everton_amarillas = everton_df["amarillas_target"]
+
+model_everton_gf = LinearRegression()
+model_everton_gf.fit(x_everton, y_everton_gf)
+
+model_everton_posesion = LinearRegression()
+model_everton_posesion.fit(x_everton, y_everton_posesion)
+
+model_everton_amarillas = LinearRegression()
+model_everton_amarillas.fit(x_everton, y_everton_amarillas)
+
+
+
 # datos a predecir
 
 udechile_stats = estaditicas_equipo("UdeChile")
