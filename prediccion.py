@@ -245,7 +245,7 @@ partido_everton = pd.DataFrame([{
     "h2_goles_promedio": h2_everton_promedio
 }])
 
-#predicciones 
+# predicciones
 
 pred_udechile_gf = model_udechile_gf.predict(partido_udechile)[0]
 pred_everton_gf = model_everton_gf.predict(partido_everton)[0]
@@ -256,7 +256,7 @@ pred_everton_posesion = model_everton_posesion.predict(partido_everton)[0]
 pred_udechile_amarillas = model_udechile_amarillas.predict(partido_udechile)[0]
 pred_everton_amarillas = model_everton_amarillas.predict(partido_everton)[0]
 
-# posibles tiros al arco y amarilla
+# resultados finales
 
 gf_udechile_final = round(pred_udechile_gf)
 gf_everton_final = round(pred_everton_gf)
@@ -266,24 +266,6 @@ posesion_everton_final = round(pred_everton_posesion)
 
 amarillas_udechile_final = round(pred_udechile_amarillas)
 amarillas_everton_final = round(pred_everton_amarillas)
-
-if gf_udechile_final < 0:
-    gf_udechile_final = 0
-
-if gf_everton_final < 0:
-    gf_everton_final = 0
-
-if amarillas_udechile_final < 0:
-    amarillas_udechile_final = 0
-
-if amarillas_everton_final < 0:
-    amarillas_everton_final = 0
-
-if posesion_udechile_final < 0:
-    posesion_udechile_final = 0
-
-if posesion_everton_final < 0:
-    posesion_everton_final = 0
 
 
 #resultado final
