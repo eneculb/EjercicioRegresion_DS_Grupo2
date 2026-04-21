@@ -169,11 +169,8 @@ features = [
     "h2_goles_promedio"
 ]
 
-
-
-# ENTRENAMIENTO DE MODELOS
-
-# U de Chile
+# entrenamos modelos
+# u de chile
 x_udechile = udechile_df[features]
 
 y_udechile_gf = udechile_df["gf_target"]
