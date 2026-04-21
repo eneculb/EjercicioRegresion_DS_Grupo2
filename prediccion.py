@@ -146,7 +146,7 @@ for _, row in df.iterrows():
         "equipo_gf_promedio_visita": equipo_visita['gf_promedio'],
         "equipo_gc_promedio_visita": equipo_visita['gc_promedio'],
         "h2_goles_promedio": h2_promedio,
-        "gf_target": row["gf"]
+        "gf_target": row["gf"],
         "posesion_target": row["posesion"],
         "amarillas_target": row["amarillas"]
     })
@@ -165,7 +165,7 @@ features = [
     "equipo_gf_promedio_local",
     "equipo_gc_promedio_local",
     "equipo_gf_promedio_visita",
-    "equipo_gc_promedio_visita"
+    "equipo_gc_promedio_visita",
     "h2_goles_promedio"
 ]
 
