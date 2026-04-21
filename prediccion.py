@@ -287,25 +287,23 @@ if posesion_everton_final < 0:
 
 
 #resultado final
-print(f"Predicción del partido Everton vs Universidad de Chile:")
-print(f"Everton:{prediccion_everton:.2f} goles esperados")
-print(f"Universidad de Chile:{prediccion_udechile:.2f} goles esperados")
-print("")
+print("Prediccion del partido: Universidad de Chile vs Everton")
+print("Marcador estimado:")
+print("Universidad de Chile:", gf_udechile_final)
+print("Everton:", gf_everton_final)
 
-print(f"Marcador estiamdo: Everton {goles_everton} - {goles_udechile} Universidad de Chile")
+print("Parte 2:")
+print("Goles U de Chile:", gf_udechile_final)
+print("Goles Everton:", gf_everton_final)
+print("Posesion U de Chile:", posesion_udechile_final, "%")
+print("Amarillas U de Chile:", amarillas_udechile_final)
 
-if goles_everton > goles_udechile:
-    print("Predicción: Everton gana")
-elif goles_everton < goles_udechile:
-    print("Predicción: Universidad de Chile gana")
+print("Posesion Everton:", posesion_everton_final, "%")
+print("Amarillas Everton:", amarillas_everton_final)
+
+if gf_udechile_final > gf_everton_final:
+    print("Gana Universidad de Chile")
+elif gf_udechile_final < gf_everton_final:
+    print("Gana Everton")
 else:
-    print("Predicción: Empate")
-
-print("")
-print(f"Posibles tiros al arco:")
-print(f"Everton: {tiros_everton} tiros al arco")
-print(f"Universidad de Chile: {tiros_udechile} tiros al arco")
-print("")
-print(f"Posibles tarjetas amarillas:")
-print(f"Everton: {amarillas_everton} tarjetas amarillas")
-print(f"Universidad de Chile: {amarillas_udechile} tarjetas amarillas")
+    print("Empate")
