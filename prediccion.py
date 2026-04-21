@@ -90,7 +90,7 @@ data = [
 df=pd.DataFrame(data)
 
 # funcion aux
-def estaditicas_equipo(equipo_name, local=None):
+def estadisticas_equipo(equipo_name, local=None):
     #calcular el promedio de goles a favor y en contra
     #local=1 -> solo local
     #local=0 -> visita
@@ -146,7 +146,7 @@ for _, row in df.iterrows():
         "equipo_gf_promedio_visita": equipo_visita['gf_promedio'],
         "equipo_gc_promedio_visita": equipo_visita['gc_promedio'],
         "h2_goles_promedio": h2_promedio,
-        "gf_target": row['gf']
+        "gf_target": row["gf"]
         "posesion_target": row["posesion"],
         "amarillas_target": row["amarillas"]
     })
