@@ -217,29 +217,35 @@ everton_stats = estaditicas_equipo("Everton")
 everton_local=estaditicas_equipo("Everton", local=1)
 everton_visita=estaditicas_equipo("Everton", local=0)
 
-# partido everton vs udechil
+# partido everton vs udechile
 
-everton_partido=pd.DataFrame([{
+partido_udechile = pd.DataFrame([{
     "local": 1,
-    "equipo_gf_promedio": everton_stats['gf_promedio'],
-    "equipo_gc_promedio": everton_stats['gc_promedio'],
-    "equipo_gf_promedio_local": everton_local['gf_promedio'],
-    "equipo_gc_promedio_local": everton_local['gc_promedio'],
-    "equipo_gf_promedio_visita": everton_visita['gf_promedio'],
-    "equipo_gc_promedio_visita": everton_visita['gc_promedio']
+    "equipo_gf_promedio": udechile_stats["gf_promedio"],
+    "equipo_gc_promedio": udechile_stats["gc_promedio"],
+    "equipo_posesion_promedio": udechile_stats["posesion_promedio"],
+    "equipo_amarillas_promedio": udechile_stats["amarillas_promedio"],
+    "equipo_gf_promedio_local": udechile_local["gf_promedio"],
+    "equipo_gc_promedio_local": udechile_local["gc_promedio"],
+    "equipo_gf_promedio_visita": udechile_visita["gf_promedio"],
+    "equipo_gc_promedio_visita": udechile_visita["gc_promedio"],
+    "h2_goles_promedio": h2_udechile_promedio
 }])
 
-udechile_partido=pd.DataFrame([{
+partido_everton = pd.DataFrame([{
     "local": 0,
-    "equipo_gf_promedio": udechile_stats['gf_promedio'],
-    "equipo_gc_promedio": udechile_stats['gc_promedio'],
-    "equipo_gf_promedio_local": udechile_local['gf_promedio'],
-    "equipo_gc_promedio_local": udechile_local['gc_promedio'],
-    "equipo_gf_promedio_visita": udechile_visita['gf_promedio'],
-    "equipo_gc_promedio_visita": udechile_visita['gc_promedio']
+    "equipo_gf_promedio": everton_stats["gf_promedio"],
+    "equipo_gc_promedio": everton_stats["gc_promedio"],
+    "equipo_posesion_promedio": everton_stats["posesion_promedio"],
+    "equipo_amarillas_promedio": everton_stats["amarillas_promedio"],
+    "equipo_gf_promedio_local": everton_local["gf_promedio"],
+    "equipo_gc_promedio_local": everton_local["gc_promedio"],
+    "equipo_gf_promedio_visita": everton_visita["gf_promedio"],
+    "equipo_gc_promedio_visita": everton_visita["gc_promedio"],
+    "h2_goles_promedio": h2_everton_promedio
 }])
 
-#predecir goles}
+#predecir goles
 
 prediccion_everton = model_everton.predict(everton_partido)[0]
 prediccion_udechile = model_udechile.predict(udechile_partido)[0]
