@@ -174,10 +174,11 @@ features = [
 # ENTRENAMIENTO DE MODELOS
 
 x_udechile = udechile_df[features]
-y_udechile = udechile_df["gf_target"]
 
-x_everton = everton_df[features]
-y_everton = everton_df["gf_target"]
+y_udechile_gf = udechile_df["gf_target"]
+y_udechile_posesion = udechile_df["posesion_target"]
+y_udechile_amarillas = udechile_df["amarillas_target"]
+
 
 # entrenamiento0 modelos de regresión lineal
 model_udechile = LinearRegression()
