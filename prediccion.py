@@ -173,19 +173,21 @@ features = [
 
 # ENTRENAMIENTO DE MODELOS
 
+# U de Chile
 x_udechile = udechile_df[features]
 
 y_udechile_gf = udechile_df["gf_target"]
 y_udechile_posesion = udechile_df["posesion_target"]
 y_udechile_amarillas = udechile_df["amarillas_target"]
 
+model_udechile_gf = LinearRegression()
+model_udechile_gf.fit(x_udechile, y_udechile_gf)
 
-# entrenamiento0 modelos de regresión lineal
-model_udechile = LinearRegression()
-model_udechile.fit(x_udechile, y_udechile)
+model_udechile_posesion = LinearRegression()
+model_udechile_posesion.fit(x_udechile, y_udechile_posesion)
 
-model_everton = LinearRegression()
-model_everton.fit(x_everton, y_everton)
+model_udechile_amarillas = LinearRegression()
+model_udechile_amarillas.fit(x_udechile, y_udechile_amarillas)
 
 # datos a predecir
 
