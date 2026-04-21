@@ -268,23 +268,22 @@ amarillas_udechile_final = round(pred_udechile_amarillas)
 amarillas_everton_final = round(pred_everton_amarillas)
 
 
-#resultado final
-print("Prediccion del partido: Universidad de Chile vs Everton")
-print("Marcador estimado:")
-print("Universidad de Chile:", gf_udechile_final)
-print("Everton:", gf_everton_final)
+# resultados finales
 
-print("Parte 2:")
-print("Goles U de Chile:", gf_udechile_final)
-print("Goles Everton:", gf_everton_final)
+gf_udechile_final = round(pred_udechile_gf)
+gf_everton_final = round(pred_everton_gf)
+
+posesion_udechile_final = round(pred_udechile_posesion)
+amarillas_udechile_final = round(pred_udechile_amarillas)
+
+print("Prediccion del partido: U de Chile vs Everton")
+print("Resultado:", gf_udechile_final, "-", gf_everton_final)
+
 print("Posesion U de Chile:", posesion_udechile_final, "%")
 print("Amarillas U de Chile:", amarillas_udechile_final)
 
-print("Posesion Everton:", posesion_everton_final, "%")
-print("Amarillas Everton:", amarillas_everton_final)
-
 if gf_udechile_final > gf_everton_final:
-    print("Gana Universidad de Chile")
+    print("Gana U de Chile")
 elif gf_udechile_final < gf_everton_final:
     print("Gana Everton")
 else:
