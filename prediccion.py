@@ -247,19 +247,16 @@ partido_everton = pd.DataFrame([{
 
 #predecir goles
 
-prediccion_everton = model_everton.predict(everton_partido)[0]
-prediccion_udechile = model_udechile.predict(udechile_partido)[0]
+pred_udechile_gf = model_udechile_gf.predict(partido_udechile)[0]
+pred_everton_gf = model_everton_gf.predict(partido_everton)[0]
 
-prediccion_everton=(prediccion_everton+h2_everton_promedio)/2
-prediccion_udechile=(prediccion_udechile+h2_udechile_promedio)/2
+pred_udechile_posesion = model_udechile_posesion.predict(partido_udechile)[0]
+pred_everton_posesion = model_everton_posesion.predict(partido_everton)[0]
 
-prediccion_everton=max(0, round(prediccion_everton))
-prediccion_udechile=max(0, round(prediccion_udechile))
+pred_udechile_amarillas = model_udechile_amarillas.predict(partido_udechile)[0]
+pred_everton_amarillas = model_everton_amarillas.predict(partido_everton)[0]
 
-goles_everton=round(prediccion_everton)
-goles_udechile=round(prediccion_udechile)
-
-# posibles tiros al arco y amarlla
+# posibles tiros al arco y amarilla
 
 def tiros_arco(goles_esperados):
     return round (max(1, goles_esperados * 4))
