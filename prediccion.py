@@ -125,9 +125,9 @@ for _, row in df.iterrows():
     equipo= row["equipo"]
     local = row["local"]
 
-    equipo_all= estaditicas_equipo(equipo)
-    equipo_local= estaditicas_equipo(equipo, local=1)
-    equipo_visita= estaditicas_equipo(equipo, local=0)
+    equipo_all= estadisticas_equipo(equipo)
+    equipo_local= estadisticas_equipo(equipo, local=1)
+    equipo_visita= estadisticas_equipo(equipo, local=0)
     
     if equipo == "UdeChile":
         h2_promedio = h2_udechile_promedio
