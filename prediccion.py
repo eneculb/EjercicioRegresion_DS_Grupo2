@@ -55,13 +55,13 @@ from sklearn.linear_model import LinearRegression
 data = [
         # UNIVERSIDAD DE CHILE
     
-     # Visita
+     # visita
     {"equipo": "UdeChile", "local": 0, "gf": 0, "gc": 1, "posesion": 63, "amarillas": 3},  # Ñublense 1-0 U
     {"equipo": "UdeChile", "local": 0, "gf": 1, "gc": 0, "posesion": 50, "amarillas": 2},  # Coquimbo 0-1 U
     {"equipo": "UdeChile", "local": 0, "gf": 1, "gc": 0, "posesion": 42, "amarillas": 2},  # Colo-Colo 0-1 U
     {"equipo": "UdeChile", "local": 0, "gf": 0, "gc": 0, "posesion": 59, "amarillas": 1},  # Palestino 0-0 U
 
-    # Local
+    #local
     {"equipo": "UdeChile", "local": 1, "gf": 4, "gc": 0, "posesion": 49, "amarillas": 4},  # U 4-0 La Serena
     {"equipo": "UdeChile", "local": 1, "gf": 1, "gc": 1, "posesion": 67, "amarillas": 2},  # U 1-1 U. de Concepción
     {"equipo": "UdeChile", "local": 1, "gf": 2, "gc": 2, "posesion": 65, "amarillas": 1},  # U 2-2 Limache
@@ -71,14 +71,14 @@ data = [
    
         # EVERTON
    
-    # Visita
+    # visita
     {"equipo": "Everton", "local": 0, "gf": 0, "gc": 1, "posesion": 48, "amarillas": 3},  # La Serena 1-0 Everton
     {"equipo": "Everton", "local": 0, "gf": 0, "gc": 1, "posesion": 47, "amarillas": 4},  # Audax 1-0 Everton
     {"equipo": "Everton", "local": 0, "gf": 0, "gc": 2, "posesion": 47, "amarillas": 4},  # Colo-Colo 2-0 Everton
     {"equipo": "Everton", "local": 0, "gf": 3, "gc": 0, "posesion": 46, "amarillas": 2},  # U. de Concepción 0-3 Everton
     {"equipo": "Everton", "local": 0, "gf": 2, "gc": 2, "posesion": 34, "amarillas": 2},  # U. Católica 2-2 Everton
 
-    # Local
+    # local
     {"equipo": "Everton", "local": 1, "gf": 0, "gc": 0, "posesion": 49, "amarillas": 3},  # Everton 0-0 Ñublense
     {"equipo": "Everton", "local": 1, "gf": 1, "gc": 2, "posesion": 54, "amarillas": 3},  # Everton 1-2 Limache
     {"equipo": "Everton", "local": 1, "gf": 1, "gc": 2, "posesion": 50, "amarillas": 3},  # Everton 1-2 O'Higgins
@@ -105,7 +105,7 @@ def estadisticas_equipo(equipo_name, local=None):
         "partidos": len(equipo_df)
     }
 
-# historial ultimos 5 partidos entre ambos equipos
+# histrial ultimos 5 partidos entre ambos equipos
 h2_data = [
     {"gf_everton": 0, "gf_udechile": 2},
     {"gf_everton": 2, "gf_udechile": 0},
