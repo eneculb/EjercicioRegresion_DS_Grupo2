@@ -548,7 +548,7 @@ gf_everton_final = round(pred_everton_gf)
 posesion_udechile_final = round(pred_udechile_posesion)
 amarillas_udechile_final = round(pred_udechile_amarillas)
 
-print("Prediccion del partido: U de Chile vs Everton")
+print("Prediccion U de Chile vs Everton")
 print("Resultado:", gf_udechile_final, "-", gf_everton_final)
 
 print("Posesion U de Chile:", posesion_udechile_final, "%")
