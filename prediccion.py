@@ -82,7 +82,7 @@ data = [
     {"equipo": "Everton", "local": 1, "gf": 1, "gc": 0}, # Everton vs Deportes Limache: 1-0
     {"equipo": "Everton", "local": 1, "gf": 0, "gc": 3}, # Everton vs Huachipato: 0-3
 ]
-
+# Convertir a data frame
 df = pd.DataFrame(data)
 
 # funcion aux
