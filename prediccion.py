@@ -169,7 +169,7 @@ model_udechile.fit(x_udechile, y_udechile)
 model_everton = LinearRegression()
 model_everton.fit(x_everton, y_everton)
 
-#Modelos de arbol binario
+# modelos de arbol binario
 
 tree_udechile = DecisionArbolRegresion(max_depth=3, random_state=42)
 
@@ -180,6 +180,27 @@ tree_everton = DecisionArbolRegresion(max_depth=3, random_state=42)
     
 tree_udechile.fit(x_udechile, y_udechile)
 tree_everton.fit(x_everton, y_everton)
+
+# se evalua regresion lineal
+
+# Predicciones
+pred_train_udechile = model_udechile.predict(x_udechile)
+pred_train_everton = model_everton.predict(x_everton)
+
+# metricas u de chile
+
+mse_udechile = mean_squared_error(y_udechile, pred_train_udechile)
+r2_udechile = r2_score(y_udechile, pred_train_udechile)
+
+# metricas everton
+
+mse_everton = mean_squared_error(y_everton, pred_train_everton)
+r2_everton = r2_score(y_everton, pred_train_everton)
+
+
+# evaluacion arbol binario
+
+
 
     
 # datos a predecir
