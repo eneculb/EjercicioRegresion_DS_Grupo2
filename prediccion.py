@@ -50,7 +50,7 @@
 
 import pandas as pd
 from sklearn.linear_model import LinearRegression
-from sklearn.linear_tree import DecisionArbolRegresion
+from sklearn.linear_tree import DecisionTreeRegressor
 from sklearn.metrics import mean_squared_error, r2_score
 import numpy as np
 
@@ -171,9 +171,9 @@ model_everton.fit(x_everton, y_everton)
 
 # modelos de arbol binario
 
-tree_udechile = DecisionArbolRegresion(max_depth=3, random_state=42)
+tree_udechile = DecisionTreeRegressor(max_depth=3, random_state=42)
 
-tree_everton = DecisionArbolRegresion(max_depth=3, random_state=42)
+tree_everton = DecisionTreeRegressor(max_depth=3, random_state=42)
 
 
 #Se entrenan los modelos
@@ -200,9 +200,18 @@ r2_everton = r2_score(y_everton, pred_train_everton)
 
 # evaluacion arbol binario
 
+pred_tree_udechile = tree_udechile.predict(x_udechile)
+pred_tree_everton = tree_everton.predict(x_everton)
+
+mse_tree_udechile = mean_squared_error(y_udechile, pred_tree_udechile)
+
+r2_tree_udechile = r2_score(y_udechile, pred_tree_udechile)
+
+mse_tree_everton = mean_squared_error(y_everton, pred_tree_everton)
+
+r2_tree_everton = r2_score(y_everton, pred_tree_everton)
 
 
-    
 # datos a predecir
 
 udechile_stats = estadisticas_equipo("UdeChile")
