@@ -50,6 +50,9 @@
 
 import pandas as pd
 from sklearn.linear_model import LinearRegression
+from sklearn.linear_tree import DecisionArbolRegresion
+from sklearn.metrics import mean_squared_error, r2_score
+import numpy as np
 
 data = [
     # DATOS DE UNIVERSIDAD DE CHILE BPSAI
@@ -166,6 +169,19 @@ model_udechile.fit(x_udechile, y_udechile)
 model_everton = LinearRegression()
 model_everton.fit(x_everton, y_everton)
 
+#Modelos de arbol binario
+
+tree_udechile = DecisionArbolRegresion(max_depth=3, random_state=42)
+
+tree_everton = DecisionArbolRegresion(max_depth=3, random_state=42)
+
+
+#Se entrenan los modelos
+    
+tree_udechile.fit(x_udechile, y_udechile)
+tree_everton.fit(x_everton, y_everton)
+
+    
 # datos a predecir
 
 udechile_stats = estadisticas_equipo("UdeChile")
