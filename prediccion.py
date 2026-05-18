@@ -272,6 +272,24 @@ tiros_udechile = tiros_arco(prediccion_udechile)
 amarillas_everton = amarillas(prediccion_everton, "Everton")
 amarillas_udechile = amarillas(prediccion_udechile, "UdeChile")
 
+# mostrar resultados
+
+# metricas regresion
+print(f"Universidad de Chile -> MSE: {mse_udechile:.4f}")
+print(f"Universidad de Chile -> R2: {r2_udechile:.4f}")
+
+print(f"Everton -> MSE: {mse_everton:.4f}")
+print(f"Everton -> R2: {r2_everton:.4f}")
+
+
+# metricas arbol binario
+print(f"Universidad de Chile -> MSE: {mse_tree_udechile:.4f}")
+print(f"Universidad de Chile -> R2: {r2_tree_udechile:.4f}")
+
+print(f"Everton -> MSE: {mse_tree_everton:.4f}")
+print(f"Everton -> R2: {r2_tree_everton:.4f}")
+
+
 #resultado final
 print(f"Predicción del partido Everton vs Universidad de Chile:")
 print(f"Everton:{prediccion_everton:.2f} goles esperados")
